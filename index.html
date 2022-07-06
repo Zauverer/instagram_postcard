@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <div class="userDetails">
+                <div class="profileImg">
+                    <img src="https://img.freepik.com/foto-gratis/retrato-hermoso-mujer-joven-posicion-pared-gris_231208-10760.jpg?w=996&t=st=1656954600~exp=1656955200~hmac=604233511fc16cb750812230511bf8e9dc7d3c952d075b76fc5b37e1cb1f95ae" alt="user" class="cover">
+                </div>
+                <h3>Vale Sánchez<br><span>Web Developer</span></h3>
+            </div>
+            <div class="btns">
+                <img src="https://www.shareicon.net/data/128x128/2015/08/23/89618_more_512x512.png" alt="dot">
+            </div>
+        </div>
+        <div class="imgBg">
+            <img src="https://img.freepik.com/foto-gratis/guanaco-lama-guanicoe-parque-nacional-torres-paine_181624-49460.jpg?t=st=1656958257~exp=1656958857~hmac=eb228722d7db186e4f01b82d3d61cde6b30495c524d29c905bab329c53581057&w=996" alt="bg" class="cover">
+        </div>
+        <div class="btns">
+            <div class="left">
+                <img src="https://img.icons8.com/material-outlined/344/like--v1.png" 
+                alt="heart" class="heart" onclick="likeButton()">
+                <img src="https://w7.pngwing.com/pngs/519/32/png-transparent-instagram-instagram-comment-social-media-comment-social-media-logo-icon-thumbnail.png" alt="comment">
+                <img src="https://cdn141.picsart.com/328472243107211.png?to=crop&type=webp&r=1456x1456&q=85" alt="share">
+            </div>
+            <div class="right">
+                <img src="https://www.citypng.com/public/uploads/preview/bookmark-outline-black-icon-11637046466a3lmav7x0q.png" alt="bookmark">
+            </div>
+        </div>
+        <h4 class="likes">101 likes</h4>
+        <h4 class="message">
+            <b>Vale Sánchez</b>
+            Torres del Paine, chilean Patagonia.
+            <span>#Chile</span>
+            <span>#Torresdelpaine</span>
+            <span>#Patagonia</span>
+            <span>#Hiking</span>
+        </h4>
+        <h4 class="comments">View all 301 comments</h4>
+        <div class="addComments">
+            <div class="userImg">
+                <img src="https://img.freepik.com/foto-gratis/retrato-hermoso-mujer-joven-posicion-pared-gris_231208-10760.jpg?w=996&t=st=1656954600~exp=1656955200~hmac=604233511fc16cb750812230511bf8e9dc7d3c952d075b76fc5b37e1cb1f95ae" alt="user" class="cover">
+            </div>
+            <input type="text" class="text" placeholder="Add a comment...">
+        </div>
+        <h5 class="postTime">2 hours ago</h5>
+    </div>
+
+    <script>
+        function likeButton(){
+            let heart = document.querySelector('.heart');
+            let likes = document.querySelector('.likes');
+            if(heart.src.match("https://img.icons8.com/material-outlined/344/like--v1.png")){
+                heart.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Emojione_2764.svg/1024px-Emojione_2764.svg.png";
+                likes.innerHTML = "103 likes"
+            }else{
+                heart.src = "https://img.icons8.com/material-outlined/344/like--v1.png";
+                likes.innerHTML = "102 likes"
+            }
+        }
+    </script>
+
+</body>
+</html>
